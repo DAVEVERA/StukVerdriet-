@@ -51,7 +51,6 @@ export default function HomePage() {
             <p className="text-white/65 text-[15px] leading-relaxed font-light">
               Over palliatieve zorg.<br />
               Over rouw en afscheid.<br />
-              Over leven tot het allerlaatst.
             </p>
           </div>
         </div>
