@@ -43,14 +43,13 @@ export default function HomePage() {
               <p className="text-[#78A179] text-[9px] font-bold uppercase tracking-[0.28em]">Podcast</p>
             </div>
             <h1 className="font-serif text-white font-bold leading-[1.15] drop-shadow-lg">
-              <span className="block text-[30px]">Tussen leven</span>
-              <span className="block text-[30px]">en loslaten.</span>
-              <span className="block text-[30px] text-[#78A179]">En dat wat overblijft.</span>
+              <span className="block text-[30px]">Tussen leven,</span>
+              <span className="block text-[30px]">loslaten</span>
+              <span className="block text-[30px] text-[#78A179]">en dat wat overblijft.</span>
             </h1>
             <div className="w-12 h-[2px] bg-[#78A179] rounded-full" />
             <p className="text-white/65 text-[15px] leading-relaxed font-light">
-              Over palliatieve zorg.<br />
-              Over rouw en afscheid.<br />
+              Over palliatieve zorg, rouw en afscheid.
             </p>
           </div>
         </div>
