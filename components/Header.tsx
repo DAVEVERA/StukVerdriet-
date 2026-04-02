@@ -27,7 +27,7 @@ export default function Header() {
         <div className="container mx-auto px-6 max-w-7xl flex justify-between items-center">
 
           {/* Logo */}
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="flex items-center gap-3">
             <Image
               src="/images/sverdriet_logo.png"
               alt="Stuk Verdriet logo"
@@ -35,6 +35,10 @@ export default function Header() {
               height={300}
               className="object-contain shrink-0 w-[80px] md:w-[120px] h-auto drop-shadow-md"
             />
+            <div className="flex flex-col leading-tight drop-shadow-md">
+              <span className="text-white font-serif font-bold text-lg md:text-2xl tracking-tight">Stuk</span>
+              <span className="text-white font-serif font-bold text-lg md:text-2xl tracking-tight">Verdriet</span>
+            </div>
           </Link>
 
           {/* Hamburger button — always visible */}
