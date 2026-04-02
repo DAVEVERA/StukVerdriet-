@@ -28,11 +28,11 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
-              src="/logo_stukverdriet.png"
+              src="/images/sverdriet_logo.png"
               alt="Stuk Verdriet logo"
               width={300}
-              height={380}
-              className="object-contain shrink-0 w-[160px] md:w-[280px] h-auto drop-shadow-md brightness-0 invert"
+              height={300}
+              className="object-contain shrink-0 w-[80px] md:w-[120px] h-auto drop-shadow-md"
             />
           </Link>
 
@@ -67,11 +67,11 @@ export default function Header() {
         <div className="flex items-center justify-between px-6 pt-6 pb-8 border-b border-white/10">
           <Link href="/" className="flex items-center" onClick={() => setOpen(false)}>
             <Image
-              src="/logo_stukverdriet.png"
+              src="/images/sverdriet_logo.png"
               alt="Stuk Verdriet logo"
               width={52}
-              height={66}
-              className="object-contain brightness-0 invert opacity-90 shrink-0"
+              height={52}
+              className="object-contain opacity-90 shrink-0"
             />
           </Link>
           <button

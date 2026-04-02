@@ -35,11 +35,11 @@ export default function Footer() {
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2">
               <Image
-                src="/SV_Logo.jpeg"
+                src="/images/sverdriet_logo.png"
                 alt="Stuk Verdriet logo"
-                width={48}
-                height={61}
-                className="object-contain brightness-0 invert opacity-80 mix-blend-screen"
+                width={64}
+                height={64}
+                className="object-contain opacity-90"
               />
             </Link>
             <div className="flex gap-3 pt-2">
