@@ -7,6 +7,8 @@ import { useState, useEffect } from 'react'
 
 const navLinks = [
   { href: '/', label: 'Home' },
+  { href: '/gids', label: 'Wegwijzer' },
+  { href: '/bijsluiter', label: 'Deel je verhaal' },
 ]
 
 export default function Header() {
