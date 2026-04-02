@@ -35,7 +35,7 @@ export default function Header() {
               height={300}
               className="object-contain shrink-0 w-[80px] md:w-[120px] h-auto drop-shadow-md"
             />
-            <div className="flex flex-col leading-tight drop-shadow-md">
+            <div className="flex flex-col leading-none drop-shadow-md -ml-1">
               <span className="text-white font-serif font-bold text-lg md:text-2xl tracking-tight">Stuk</span>
               <span className="text-white font-serif font-bold text-lg md:text-2xl tracking-tight">Verdriet</span>
             </div>
