@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import Script from 'next/script'
 import Image from 'next/image'
 
 // ─── AGENDA DATA ────────────────────────────────────────────────
@@ -472,6 +471,42 @@ export default function GidsPage() {
         </div>
       </section>
 
+      {/* ── Handige Links ─────────────────────────────────────── */}
+      <section className="container mx-auto px-6 max-w-5xl py-20">
+        <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-[#78A179] mb-2">Doorverwijzing</p>
+        <h2 className="text-3xl md:text-4xl font-bold text-[#2F4F4F] mb-3">Handige links</h2>
+        <p className="text-[#2F4F4F]/60 mb-12 max-w-2xl">Betrouwbare Nederlandse organisaties voor informatie, begeleiding en lotgenotencontact bij rouw en palliatieve zorg.</p>
+
+        <div className="space-y-12">
+          {linkCategorieën.map((cat) => (
+            <div key={cat.titel}>
+              <h3 className="text-sm font-bold uppercase tracking-[0.2em] text-[#78A179] mb-5 flex items-center gap-3">
+                {cat.titel}
+                <span className="flex-1 h-px bg-[#2F4F4F]/10" />
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                {cat.links.map((link) => (
+                  <a
+                    key={link.naam}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex flex-col gap-2 p-5 bg-white rounded-2xl border border-[#2F4F4F]/8 hover:border-[#78A179]/30 hover:shadow-md transition-all duration-300"
+                  >
+                    <div className="flex items-center justify-between">
+                      <span className="font-bold text-[#2F4F4F] group-hover:text-[#78A179] transition-colors text-sm">{link.naam}</span>
+                      <svg className="w-3.5 h-3.5 text-[#2F4F4F]/20 group-hover:text-[#78A179] transition-colors shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                    </div>
+                    <p className="text-xs text-[#2F4F4F]/50 leading-relaxed">{link.omschrijving}</p>
+                    <span className="text-[10px] font-bold text-[#78A179]/60 group-hover:text-[#78A179] transition-colors truncate">{link.url.replace('https://', '')}</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* ── Agenda ───────────────────────────────────────────── */}
       <section className="container mx-auto px-6 max-w-5xl py-20">
         <div className="flex items-end justify-between mb-2">
@@ -640,42 +675,6 @@ export default function GidsPage() {
         </div>
       )}
 
-      {/* ── Handige Links ─────────────────────────────────────── */}
-      <section className="container mx-auto px-6 max-w-5xl py-20">
-        <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-[#78A179] mb-2">Doorverwijzing</p>
-        <h2 className="text-3xl md:text-4xl font-bold text-[#2F4F4F] mb-3">Handige links</h2>
-        <p className="text-[#2F4F4F]/60 mb-12 max-w-2xl">Betrouwbare Nederlandse organisaties voor informatie, begeleiding en lotgenotencontact bij rouw en palliatieve zorg.</p>
-
-        <div className="space-y-12">
-          {linkCategorieën.map((cat) => (
-            <div key={cat.titel}>
-              <h3 className="text-sm font-bold uppercase tracking-[0.2em] text-[#78A179] mb-5 flex items-center gap-3">
-                {cat.titel}
-                <span className="flex-1 h-px bg-[#2F4F4F]/10" />
-              </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                {cat.links.map((link) => (
-                  <a
-                    key={link.naam}
-                    href={link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group flex flex-col gap-2 p-5 bg-white rounded-2xl border border-[#2F4F4F]/8 hover:border-[#78A179]/30 hover:shadow-md transition-all duration-300"
-                  >
-                    <div className="flex items-center justify-between">
-                      <span className="font-bold text-[#2F4F4F] group-hover:text-[#78A179] transition-colors text-sm">{link.naam}</span>
-                      <svg className="w-3.5 h-3.5 text-[#2F4F4F]/20 group-hover:text-[#78A179] transition-colors shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-                    </div>
-                    <p className="text-xs text-[#2F4F4F]/50 leading-relaxed">{link.omschrijving}</p>
-                    <span className="text-[10px] font-bold text-[#78A179]/60 group-hover:text-[#78A179] transition-colors truncate">{link.url.replace('https://', '')}</span>
-                  </a>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* ── FAQ ───────────────────────────────────────────────── */}
       <section className="bg-white py-20">
         <div className="container mx-auto px-6 max-w-3xl">
@@ -709,21 +708,6 @@ export default function GidsPage() {
               Meer vragen & antwoorden op overpalliatievezorg.nl →
             </a>
           </div>
-        </div>
-      </section>
-
-      {/* ── Instagram @overpalliatievezorg ───────────────────── */}
-      <section className="container mx-auto px-6 max-w-5xl py-20">
-        <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-[#78A179] mb-2">Volg ons op Instagram</p>
-        <h2 className="text-3xl md:text-4xl font-bold text-[#2F4F4F] mb-8">@overpalliatievezorg</h2>
-        <div className="flex justify-center">
-          <blockquote
-            className="instagram-media w-full max-w-xl"
-            data-instgrm-permalink="https://www.instagram.com/overpalliatievezorg/"
-            data-instgrm-version="14"
-            style={{ background: '#FFF', border: 0, borderRadius: '12px', boxShadow: '0 0 1px 0 rgba(0,0,0,0.08), 0 4px 24px 0 rgba(47,79,79,0.08)', margin: '1px', minWidth: '326px', padding: 0 }}
-          />
-          <Script src="//www.instagram.com/embed.js" strategy="lazyOnload" />
         </div>
       </section>
 
