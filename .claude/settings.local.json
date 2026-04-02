@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -r logo_stukverdriet.png . --include=*.tsx --include=*.ts)",
+      "Bash(rm -rf \"C:/Users/MNRV/Desktop/StukVerdriet-master/assets\")",
+      "Bash(rm -f \"C:/Users/MNRV/Desktop/StukVerdriet-master/components/SearchBar.tsx\")",
+      "Bash(rm -f \"C:/Users/MNRV/Desktop/StukVerdriet-master/public/file.svg\" \"C:/Users/MNRV/Desktop/StukVerdriet-master/public/globe.svg\" \"C:/Users/MNRV/Desktop/StukVerdriet-master/public/next.svg\" \"C:/Users/MNRV/Desktop/StukVerdriet-master/public/vercel.svg\" \"C:/Users/MNRV/Desktop/StukVerdriet-master/public/window.svg\")",
+      "Bash(npm install:*)",
+      "WebFetch(domain:overpalliatievezorg.nl)",
+      "WebSearch"
+    ]
+  }
+}
