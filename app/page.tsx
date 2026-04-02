@@ -61,18 +61,16 @@ export default function HomePage() {
             <div className="max-w-lg space-y-5 drop-shadow-xl">
               <div className="flex items-center gap-3">
                 <span className="block w-8 h-px bg-[#78A179]/80" />
-                <p className="text-[#78A179] text-[10px] font-bold uppercase tracking-[0.28em]">Podcast</p>
+                <p className="text-[#78A179] text-[10px] font-bold uppercase tracking-[0.28em]"></p>
               </div>
               <h1 className="font-serif text-white font-bold leading-[1.2]">
-                <span className="block text-[40px] lg:text-[52px]">Tussen leven</span>
-                <span className="block text-[40px] lg:text-[52px]">en loslaten.</span>
+                <span className="block text-[40px] lg:text-[52px]">Tussen leven,</span>
+                <span className="block text-[40px] lg:text-[52px]"> loslaten</span>
                 <span className="block text-[40px] lg:text-[52px] text-[#78A179]">En dat wat overblijft.</span>
               </h1>
               <div className="w-16 h-[3px] bg-[#78A179] rounded-full" />
               <p className="text-white/70 text-lg leading-relaxed font-light">
-                Een podcast over palliatieve zorg.<br />
-                Over rouw. Over afscheid.<br />
-                Over leven tot het allerlaatst.
+                Een podcast over rouw.<br />
               </p>
             </div>
           </div>
