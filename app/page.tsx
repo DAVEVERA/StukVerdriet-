@@ -43,8 +43,7 @@ export default function HomePage() {
               <p className="text-[#78A179] text-[9px] font-bold uppercase tracking-[0.28em]">Podcast</p>
             </div>
             <h1 className="font-serif text-white font-bold leading-[1.15] drop-shadow-lg">
-              <span className="block text-[30px]">Tussen leven,</span>
-              <span className="block text-[30px]">loslaten</span>
+              <span className="block text-[30px]">Tussen leven, loslaten</span>
               <span className="block text-[30px] text-[#78A179]">en dat wat overblijft.</span>
             </h1>
             <div className="w-12 h-[2px] bg-[#78A179] rounded-full" />
