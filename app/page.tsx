@@ -11,13 +11,21 @@ export default function HomePage() {
       {/* ── Hero ─────────────────────────────────────────────── */}
       <section className="relative w-full h-[100svh] min-h-[600px] bg-gray-900">
 
-        {/* Afbeelding — mobiel: vlinder centraal tonen, desktop: center */}
+        {/* Mobiel: gecropte portret versie met vlinder centraal */}
+        <Image
+          src="/images/herostartbutterfly_mobile.jpg"
+          alt="Stukverdriet"
+          fill
+          priority
+          className="object-cover object-center opacity-95 md:hidden"
+        />
+        {/* Desktop: originele landscape versie */}
         <Image
           src="/images/herostartbutterfly.png"
           alt="Stukverdriet"
           fill
           priority
-          className="object-cover object-[center_35%] md:object-center opacity-95"
+          className="object-cover object-center opacity-95 hidden md:block"
         />
 
         {/* Mobiel: gradient van onderen zodat vlinder bovenin vrij blijft */}

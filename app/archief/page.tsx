@@ -29,22 +29,53 @@ function ArchiefContent() {
     <div className="w-full overflow-x-hidden">
 
       {/* Hero */}
-      <section className="relative w-full h-[600px] md:h-[750px] flex items-start pt-28 md:pt-36 bg-gray-900">
-        <Image src="/images/stukverdriet_hero2.png" alt="Archief" fill priority className="object-cover opacity-60" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/55 to-transparent" />
-        <div className="container relative z-10 mx-auto px-6 max-w-7xl">
-          <div className="max-w-xl">
-            <div className="flex items-center gap-3 mb-4 sm:mb-5">
-              <span className="block w-8 h-px bg-[#78A179]/80" />
-              <p className="text-[#78A179] text-[10px] font-bold uppercase tracking-[0.28em]">Afleveringen</p>
+      <section className="relative w-full h-[100svh] min-h-[600px] bg-gray-900">
+        <Image src="/images/stukverdriet_hero2.png" alt="Thema's & Archief" fill priority className="object-cover object-center opacity-80" />
+        {/* Mobiel: gradient van onderen */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent md:hidden" />
+        {/* Desktop: gradient van links */}
+        <div className="absolute inset-0 hidden md:block bg-gradient-to-r from-black/80 via-black/45 to-transparent" />
+        <div className="absolute inset-0 hidden md:block bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+
+        {/* Mobiel: tekst onderaan */}
+        <div className="absolute inset-x-0 bottom-0 z-10 px-6 pb-10 md:hidden">
+          <div className="space-y-3 max-w-sm">
+            <div className="flex items-center gap-3">
+              <span className="block w-6 h-px bg-[#78A179]/80" />
+              <p className="text-[#78A179] text-[9px] font-bold uppercase tracking-[0.28em]">Afleveringen</p>
             </div>
-            <h1 className="text-[30px] sm:text-[38px] md:text-[48px] lg:text-[56px] font-extrabold text-white leading-[1.1] tracking-tight drop-shadow-lg">
-              Thema&apos;s &amp; Archief
+            <h1 className="font-serif text-white font-bold leading-[1.15] drop-shadow-lg">
+              <span className="block text-[30px]">Alle afleveringen.</span>
+              <span className="block text-[30px]">Op thema.</span>
+              <span className="block text-[30px] text-[#78A179]">Op gevoel.</span>
             </h1>
-            <div className="mt-7 sm:mt-9 space-y-5">
-              <div className="w-14 h-[2px] bg-[#78A179] rounded-full" />
-              <p className="text-[18px] sm:text-[20px] md:text-[22px] text-white/65 leading-[1.7] font-light max-w-[480px]">
-                Alle afleveringen, geordend op gevoel en thema. Zoek op wat bij jou past.
+            <div className="w-12 h-[2px] bg-[#78A179] rounded-full" />
+            <p className="text-white/65 text-[15px] leading-relaxed font-light">
+              Zoek op wat bij jou past.<br />
+              Luister op je eigen tempo.<br />
+              Vind wat je nodig hebt.
+            </p>
+          </div>
+        </div>
+
+        {/* Desktop: tekst links */}
+        <div className="hidden md:flex absolute inset-0 z-10 items-center">
+          <div className="container mx-auto px-6 max-w-7xl pt-20">
+            <div className="max-w-lg space-y-5 drop-shadow-xl">
+              <div className="flex items-center gap-3">
+                <span className="block w-8 h-px bg-[#78A179]/80" />
+                <p className="text-[#78A179] text-[10px] font-bold uppercase tracking-[0.28em]">Afleveringen</p>
+              </div>
+              <h1 className="font-serif text-white font-bold leading-[1.2]">
+                <span className="block text-[40px] lg:text-[52px]">Alle afleveringen.</span>
+                <span className="block text-[40px] lg:text-[52px]">Op thema.</span>
+                <span className="block text-[40px] lg:text-[52px] text-[#78A179]">Op gevoel.</span>
+              </h1>
+              <div className="w-16 h-[3px] bg-[#78A179] rounded-full" />
+              <p className="text-white/70 text-lg leading-relaxed font-light">
+                Zoek op wat bij jou past.<br />
+                Luister op je eigen tempo.<br />
+                Vind wat je nodig hebt.
               </p>
             </div>
           </div>

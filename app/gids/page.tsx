@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Script from 'next/script'
+import Image from 'next/image'
 
 // ─── AGENDA DATA ────────────────────────────────────────────────
 interface AgendaEvent {
@@ -410,28 +411,62 @@ export default function GidsPage() {
     <div className="w-full overflow-x-hidden bg-[#F7F4F0]">
 
       {/* ── Hero ─────────────────────────────────────────────── */}
-      <section className="relative w-full bg-[#2F4F4F] pt-32 pb-20 px-6">
-        <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'radial-gradient(circle at 30% 50%, #78A179 0%, transparent 60%), radial-gradient(circle at 80% 20%, #78A179 0%, transparent 50%)' }} />
-        <div className="container mx-auto max-w-5xl relative z-10">
-          <div className="flex items-center gap-3 mb-5">
-            <span className="block w-8 h-px bg-[#78A179]/80" />
-            <p className="text-[#78A179] text-[10px] font-bold uppercase tracking-[0.28em]">Wegwijzer</p>
-          </div>
-          <h1 className="text-[36px] sm:text-[48px] md:text-[60px] font-extrabold text-white leading-[1.05] tracking-tight mb-6">
-            Handvatten bij<br />rouw en verlies
-          </h1>
-          <p className="text-white/60 text-lg sm:text-xl leading-relaxed max-w-2xl">
-            Betrouwbare Nederlandse organisaties, ervaringsverhalen van mensen die het kennen, en een agenda vol bijeenkomsten — bij elkaar gezet voor iedereen die zoekt.
-          </p>
+      <section className="relative w-full h-[100svh] min-h-[600px] bg-gray-900">
+        <Image src="/images/stukbverdriet_hero4.png" alt="Wegwijzer rouw en verlies" fill priority className="object-cover object-center opacity-85" />
+        {/* Mobiel: gradient van onderen */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent md:hidden" />
+        {/* Desktop: gradient van links */}
+        <div className="absolute inset-0 hidden md:block bg-gradient-to-r from-black/80 via-black/45 to-transparent" />
+        <div className="absolute inset-0 hidden md:block bg-gradient-to-t from-black/40 via-transparent to-transparent" />
 
-          {/* PZNL badge */}
-          <div className="mt-10 inline-flex items-center gap-3 bg-white/8 border border-white/15 rounded-2xl px-5 py-3 backdrop-blur-sm">
-            <div className="w-8 h-8 rounded-lg bg-[#78A179] flex items-center justify-center shrink-0">
-              <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+        {/* Mobiel: tekst onderaan */}
+        <div className="absolute inset-x-0 bottom-0 z-10 px-6 pb-10 md:hidden">
+          <div className="space-y-3 max-w-sm">
+            <div className="flex items-center gap-3">
+              <span className="block w-6 h-px bg-[#78A179]/80" />
+              <p className="text-[#78A179] text-[9px] font-bold uppercase tracking-[0.28em]">Wegwijzer</p>
             </div>
-            <div>
-              <p className="text-white text-sm font-bold leading-none">In samenwerking met PZNL</p>
-              <a href="https://pznl.nl" target="_blank" rel="noopener noreferrer" className="text-[#78A179] text-xs hover:text-[#96c497] transition-colors">pznl.nl →</a>
+            <h1 className="font-serif text-white font-bold leading-[1.15] drop-shadow-lg">
+              <span className="block text-[30px]">Handvatten</span>
+              <span className="block text-[30px]">bij rouw</span>
+              <span className="block text-[30px] text-[#78A179]">en verlies.</span>
+            </h1>
+            <div className="w-12 h-[2px] bg-[#78A179] rounded-full" />
+            <p className="text-white/65 text-[15px] leading-relaxed font-light">
+              Betrouwbare organisaties.<br />
+              Ervaringsverhalen.<br />
+              Agenda en FAQ.
+            </p>
+            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/15 rounded-xl px-4 py-2 mt-1">
+              <span className="text-white text-xs font-semibold">In samenwerking met</span>
+              <a href="https://pznl.nl" target="_blank" rel="noopener noreferrer" className="text-[#78A179] text-xs font-bold hover:text-[#96c497] transition-colors">PZNL →</a>
+            </div>
+          </div>
+        </div>
+
+        {/* Desktop: tekst links */}
+        <div className="hidden md:flex absolute inset-0 z-10 items-center">
+          <div className="container mx-auto px-6 max-w-7xl pt-20">
+            <div className="max-w-lg space-y-5 drop-shadow-xl">
+              <div className="flex items-center gap-3">
+                <span className="block w-8 h-px bg-[#78A179]/80" />
+                <p className="text-[#78A179] text-[10px] font-bold uppercase tracking-[0.28em]">Wegwijzer</p>
+              </div>
+              <h1 className="font-serif text-white font-bold leading-[1.2]">
+                <span className="block text-[40px] lg:text-[52px]">Handvatten</span>
+                <span className="block text-[40px] lg:text-[52px]">bij rouw</span>
+                <span className="block text-[40px] lg:text-[52px] text-[#78A179]">en verlies.</span>
+              </h1>
+              <div className="w-16 h-[3px] bg-[#78A179] rounded-full" />
+              <p className="text-white/70 text-lg leading-relaxed font-light">
+                Betrouwbare organisaties.<br />
+                Ervaringsverhalen.<br />
+                Agenda en FAQ.
+              </p>
+              <div className="inline-flex items-center gap-3 bg-white/8 border border-white/15 rounded-2xl px-5 py-3 backdrop-blur-sm">
+                <span className="text-white text-sm font-semibold">In samenwerking met</span>
+                <a href="https://pznl.nl" target="_blank" rel="noopener noreferrer" className="text-[#78A179] text-sm font-bold hover:text-[#96c497] transition-colors">PZNL.nl →</a>
+              </div>
             </div>
           </div>
         </div>
